@@ -91,7 +91,7 @@ body {
 .Herosection .leftbox{
     
     padding: 2rem;
-    width: 50%;
+    width: 60%;
 }
 .Herosection .leftbox .hero-subheading{
     color: var(--primary-color);
@@ -196,7 +196,7 @@ body {
   border-radius: 12px;
 }
 .Herosection .rightbox {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
