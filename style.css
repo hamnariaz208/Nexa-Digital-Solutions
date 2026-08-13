@@ -94,12 +94,12 @@ body {
 }
 .Herosection .leftbox .hero-subheading{
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 .Herosection .leftbox .hero-heading span{
       font-weight: bold; 
-      font-size: 3.8rem;
+      font-size: 3.8em;
 }
 
 .Herosection .leftbox .hero-heading span:last-child{
