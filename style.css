@@ -99,13 +99,13 @@ body {
     font-weight: bold;
 }
 .Herosection .leftbox .hero-heading span{
-     font-size: 2rem; 
+     font-size: 3rem; 
 }
 
 .Herosection .leftbox .hero-heading span:last-child{
     color: var(--primary-color);
     font-weight: bold; 
-    font-size: 2rem; 
+    font-size: 3rem; 
 }
 
 
