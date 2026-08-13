@@ -197,10 +197,10 @@ body {
   border-radius: 12px;
 }
 .Herosection .rightbox {
-    width: 40%;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* ---------- FEATURES ---------- */
 .Feature{
