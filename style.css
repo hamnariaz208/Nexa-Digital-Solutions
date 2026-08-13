@@ -99,13 +99,14 @@ body {
     font-weight: bold;
 }
 .Herosection .leftbox .hero-heading span{
-     font-size: 4rem; 
+     font-size: clamp(2rem, 5vw, 4rem); 
+     font-weight: bold; 
 }
 
 .Herosection .leftbox .hero-heading span:last-child{
     color: var(--primary-color);
     font-weight: bold; 
-    font-size: 3.5rem; 
+    clamp(2rem, 5vw, 4rem); 
 }
 
 
