@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nexa Digital Solution</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-<style type="text/tailwindcss">
-  @custom-variant dark (&:where(.dark, .dark *));
-</style>
-   
+    <style type="text/tailwindcss">
+     @custom-variant dark (&:where(.dark, .dark *));
+    </style>
   </head>
   <body 
   class="w-full min-h-screen bg-white text-black transition-colors duration-300 dark:bg-gray-900 dark:text-white font-[Cambria,Cochin,Georgia,Times,'Times New Roman',serif]"
@@ -62,14 +60,14 @@
             Blog
           </a>
         </nav>
-         <button
-  id="themeToggle"
-  type="button"
-  class="cursor-pointer text-xl"
-  aria-label="Toggle dark mode"
->
-  🌙
-</button>
+        <button
+           id="themeToggle"
+           type="button"
+           class="hidden cursor-pointer text-xl md:block"
+           aria-label="Toggle dark mode"
+        >
+          🌙
+        </button>
         <!-- Contact Button -->
         <div class="hidden items-center md:flex">
           <a
@@ -81,7 +79,18 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div class="flex items-center justify-center md:hidden">
+<div class="flex items-center gap-4 md:hidden">
+
+  <!-- Mobile Dark Mode -->
+  <button
+    id="mobileThemeToggle"
+    type="button"
+    class="cursor-pointer text-xl"
+    aria-label="Toggle dark mode"
+  >
+    🌙
+  </button>
+  <!-- Hamburger -->
   <button
     id="menuButton"
     type="button"
@@ -94,9 +103,9 @@
       id="hamburgerIcon"
       class="absolute inset-0 flex flex-col items-center justify-center gap-1.5"
     >
-      <span class="h-0.5 w-7 bg-black"></span>
-      <span class="h-0.5 w-7 bg-black"></span>
-      <span class="h-0.5 w-7 bg-black"></span>
+      <span class="h-0.5 w-7 bg-black dark:bg-white"></span>
+      <span class="h-0.5 w-7 bg-black dark:bg-white"></span>
+      <span class="h-0.5 w-7 bg-black dark:bg-white"></span>
     </span>
 
   </button>
@@ -130,7 +139,7 @@
     Pricing
   </a>
 
-  <a href="#blog" class="text-base text-black dark:text-whitehover:text-blue-600">
+  <a href="#blog" class="text-base text-black dark:text-white hover:text-blue-600">
     Blog
   </a>
 
@@ -338,7 +347,127 @@
           </div>
         </div>
       </section>
+     <!-- ================= FAQ ACCORDION ================= -->
+<section id="faq" class="w-full px-4 py-12">
+  <div class="mx-auto w-full max-w-3xl">
 
+    <!-- FAQ Heading -->
+    <div class="mb-8 text-center">
+      <p class="text-base font-bold tracking-wider text-blue-600">
+        FAQ
+      </p>
+
+      <h2 class="mt-2 text-2xl font-bold text-black dark:text-white sm:text-3xl">
+        Frequently Asked Questions
+      </h2>
+
+      <p class="mt-2 text-sm text-slate-500 dark:text-slate-300">
+        Find answers to some of the most common questions about our services.
+      </p>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-4">
+
+      <!-- FAQ 1 -->
+      <div
+        class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800"
+      >
+        <button
+          type="button"
+          class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white"
+        >
+          <span>What services do you offer?</span>
+
+          <span class="faq-icon ml-4 text-2xl font-normal">
+            +
+          </span>
+        </button>
+
+        <div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
+          <p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+            We offer a comprehensive range of digital services including
+            web development, UI/UX design, mobile app development, and
+            digital marketing strategies tailored to your business needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div
+        class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800"
+      >
+        <button
+          type="button"
+          class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white"
+        >
+          <span>How long does a typical project take?</span>
+
+          <span class="faq-icon ml-4 text-2xl font-normal">
+            +
+          </span>
+        </button>
+
+        <div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
+          <p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+            Project timelines vary depending on complexity and scope.
+            Typically, web projects range from 4–12 weeks. We'll provide
+            a detailed timeline during the initial consultation.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div
+        class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800"
+      >
+        <button
+          type="button"
+          class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white"
+        >
+          <span>Do you provide ongoing support?</span>
+
+          <span class="faq-icon ml-4 text-2xl font-normal">
+            +
+          </span>
+        </button>
+
+        <div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
+          <p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+            Absolutely! We offer ongoing maintenance and support packages
+            to ensure your website or app continues to perform optimally.
+            Support plans are customizable based on your needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div
+        class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800"
+      >
+        <button
+          type="button"
+          class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white"
+        >
+          <span>What is your pricing model?</span>
+
+          <span class="faq-icon ml-4 text-2xl font-normal">
+            +
+          </span>
+        </button>
+
+        <div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
+          <p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+            We offer flexible pricing models including fixed-price projects,
+            hourly rates, and retainer-based engagements. Contact us to
+            discuss which option works best for your budget.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       <!-- ================= TESTIMONIALS ================= -->
       <section id="about" class="flex items-center justify-center px-4 py-8">
         <div
@@ -358,12 +487,12 @@
           </p>
           <!-- Testimonial Cards -->
           <div
-            class="mt-8 flex w-full flex-wrap items-center justify-center gap-6"
+            class="mt-8 flex w-full gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth md:flex-wrap md:justify-center md:overflow-visible"
           >
             <!-- Testimonial 1 -->
             <div
-              class="w-full max-w-sm rounded-2xl border-2 dark:shadow-[0_15px_25px_-10px_#969da7] border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] transition duration-300 hover:-translate-y-1.5"
-            >
+               class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm"
+              >
               <div class="flex items-center justify-start">
                 <img
                   src="avator3.png"
@@ -387,7 +516,7 @@
             </div>
             <!-- Testimonial 2 -->
             <div
-              class="w-full max-w-sm rounded-2xl border-2  dark:shadow-[0_15px_25px_-10px_#969da7] border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] transition duration-300 hover:-translate-y-1.5"
+              class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm"
             >
               <div class="flex items-center justify-start">
                 <img
@@ -413,7 +542,7 @@
 
             <!-- Testimonial 3 -->
             <div
-              class="w-full max-w-sm rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left dark:shadow-[0_15px_25px_-10px_#969da7] shadow-[0_15px_25px_-10px_#f0ede9] transition duration-300 hover:-translate-y-1.5"
+              class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm"
             >
               <div class="flex items-center justify-start">
                 <img
@@ -641,74 +770,32 @@
             </div>
 
             <!-- Newsletter -->
-            <div>
-              <h3 class="mb-6 text-lg font-bold text-white">Newsletter</h3>
-              <p class="text-sm text-slate-400">Stay Updated</p>
-              <div class="mt-4">
-                <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  class="w-full rounded bg-slate-700 px-3 py-2 text-sm font-semibold text-white outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <button
-                type="button"
-                class="mt-4 rounded bg-blue-600 px-4 py-2 text-sm font-bold text-white shadow-[0_2px_8px_#2563EB] transition hover:bg-purple-600"
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div
-          class="flex flex-col gap-3 pt-6 text-center text-sm text-white sm:flex-row sm:items-center sm:justify-between sm:text-left"
-        >
-          <div>© 2026 Your Brand. All rights reserved.</div>
-          <div class="flex justify-center gap-2 sm:justify-end">
-            <a href="#privacy" class="transition hover:text-blue-400">
-              Privacy Policy
-            </a>
-            <span>•</span>
-            <a href="#terms" class="transition hover:text-blue-400">
-              Terms of Service
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-   <script>
-  const menuButton = document.getElementById("menuButton");
-  const closeButton = document.getElementById("closeButton");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const themeToggle= document.getElementById("themeToggle");
-
-  menuButton.addEventListener("click", () => {
-    mobileMenu.classList.remove("hidden");
-    mobileMenu.classList.add("flex");
-
-    menuButton.classList.add("hidden");
-  });
-
-  closeButton.addEventListener("click", () => {
-    mobileMenu.classList.remove("flex");
-    mobileMenu.classList.add("hidden");
-
-    menuButton.classList.remove("hidden");
-  });
-   themeToggle.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-
-    if (document.documentElement.classList.contains("dark")) {
-      themeToggle.textContent = "☀️";
-    } else {
-      themeToggle.textContent = "🌙";
-    }
-  });
-
-  
-</script>
-  </body>
+            <div> 
+              <h3 class="mb-6 text-lg font-bold text-white">Newsletter</h3> 
+              <p class="text-sm text-slate-400">Stay Updated</p> 
+              <div class="mt-4"> 
+                <input id="emailInput" type="email" placeholder="Enter Your Email" required
+                class="w-full rounded bg-slate-700 px-3 py-2 text-sm font-semibold text-white outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500" 
+                /> 
+              </div> 
+              <button id="subscribeButton" type="button" class="mt-4 rounded bg-blue-600 px-4 py-2 text-sm font-bold text-white shadow-[0_2px_8px_#2563EB] transition hover:bg-purple-600" 
+              >    Subscribe 
+              </button> 
+            </div> 
+          </div> 
+        </div> 
+        <!-- Footer Bottom --> 
+         <div class="flex flex-col gap-3 pt-6 text-center text-sm text-white sm:flex-row sm:items-center sm:justify-between sm:text-left" 
+         > 
+         <div>© 2026 Nexa Digital Solution. All rights reserved.</div> 
+         <div class="flex justify-center gap-2 sm:justify-end">
+           <a href="#privacy" class="transition hover:text-blue-400"> Privacy Policy </a> 
+           <span>•</span> 
+           <a href="#terms" class="transition hover:text-blue-400"> Terms of Service </a>
+          </div> 
+          </div> 
+        </div> 
+      </footer> 
+    <script src="script.js"></script> 
+  </body> 
 </html>
