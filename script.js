@@ -66,17 +66,52 @@ faqButtons.forEach((button) => {
     }
   });
 });
+
+const newsletterForm = document.getElementById("newsletterForm");
 const emailInput = document.getElementById("emailInput");
-const subscribeButton = document.getElementById("subscribeButton");
-subscribeButton.addEventListener("click", function () {
-  if (!emailInput.checkValidity()) {
-    emailInput.reportValidity();
+const emailError = document.getElementById("emailError");
+
+emailInput.addEventListener("input", () => {
+
+  const email = emailInput.value.trim();
+
+  if (email === "") {
+    emailError.textContent = "Email is required.";
+    emailInput.classList.remove("border-green-500");
+    emailInput.classList.add("border-red-500");
+  }
+
+  else if (!email.includes("@")) {
+    emailError.textContent = "Please enter a valid email.";
+    emailInput.classList.remove("border-green-500");
+    emailInput.classList.add("border-red-500");
+  }
+
+  else {
+    emailError.textContent = "Valid email ✓";
+    emailInput.classList.remove("border-red-500");
+    emailInput.classList.add("border-green-500");
+  }
+
+});
+
+newsletterForm.addEventListener("submit", (event) => {
+
+  event.preventDefault();
+
+  const email = emailInput.value.trim();
+
+  if (email === "" || !email.includes("@")) {
+    emailError.textContent = "Please enter a valid email.";
+    emailInput.classList.remove("border-green-500");
+    emailInput.classList.add("border-red-500");
     return;
   }
-  alert(
-    "Thank you for subscribing!\n\n" +
-    "Email: " + emailInput.value + "\n" +
-    "Status: Successfully Subscribed"
-  );
- emailInput.value = "";
+
+  alert("Thank you! You have successfully subscribed.");
+
+  newsletterForm.reset();
+
+  emailError.textContent = "";
+  emailInput.classList.remove("border-green-500");
 });
