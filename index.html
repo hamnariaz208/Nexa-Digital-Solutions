@@ -1,803 +1,509 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nexa Digital Solution</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-     @custom-variant dark (&:where(.dark, .dark *));
-    </style>
-  </head>
-  <body 
-  class="w-full min-h-screen bg-white text-black transition-colors duration-300 dark:bg-gray-900 dark:text-white font-[Cambria,Cochin,Georgia,Times,'Times New Roman',serif]"
->
-    <!-- ================= HEADER ================= -->
-    <header class="w-full">
-      <section
-        class="flex w-full items-center justify-around px-4 py-2 md:px-6 lg:px-8"
-      >
-        <!-- Logo -->
-        <div class="flex items-center justify-center">
-          <img
-            class="h-20 w-44 object-contain"
-            src="logo.png"
-            alt="Nexa logo"
-          />
-        </div>
+<!DOCTYPE html>
 
-        <!-- Desktop Navbar -->
-        <nav class="hidden items-center justify-around md:flex">
-          
-          <a
-            href="#home"
-            class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg"
-          >
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexa Digital Solution | Digital Solutions &amp; Services</title>
+<meta content="Nexa Digital Solution provides modern, responsive, and professional digital solutions for businesses." name="description"/>
+<meta content="Nexa Digital Solution, digital solutions, web development, digital agency, responsive website" name="keywords"/>
+<meta content="Nexa Digital Solution" name="author"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<meta content="Nexa Digital Solution | Digital Solutions &amp; Services" property="og:title"/>
+<meta content="Modern and professional digital solutions for businesses." property="og:description"/>
+<meta content="https://your-live-website.vercel.app/images/preview.jpg" property="og:image"/>
+<meta content="website" property="og:type"/>
+<link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="w-full min-h-screen bg-white text-black transition-colors duration-300 dark:bg-gray-900 dark:text-white font-[Cambria,Cochin,Georgia,Times,'Times New Roman',serif]">
+<!-- ================= HEADER ================= -->
+<header class="w-full">
+<section class="flex w-full items-center justify-around px-4 py-2 md:px-6 lg:px-8">
+<!-- Logo -->
+<div class="flex items-center justify-center">
+<img alt="Nexa logo" class="h-20 w-44 object-contain" height="80" src="logo.png" width="176"/>
+</div>
+<!-- Desktop Navbar -->
+<nav class="hidden items-center justify-around md:flex">
+<a class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg" href="#home">
             Home
           </a>
-          <a
-            href="#about"
-           class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg"
-          >
+<a class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg" href="#about">
             About Us
           </a>
-          <a
-            href="#services"
-           class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg"
-          >
+<a class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg" href="#services">
             Services
           </a>
-          <a
-            href="#pricing"
-            class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg"
-          >
+<a class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg" href="#pricing">
             Pricing
           </a>
-          <a
-            href="#blog"
-            class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg"
-            >
+<a class="px-4 py-6 text-base text-black dark:text-white transition hover:text-blue-600 hover:underline lg:px-6 lg:text-lg" href="#blog">
             Blog
           </a>
-        </nav>
-        <button
-           id="themeToggle"
-           type="button"
-           class="hidden cursor-pointer text-xl md:block"
-           aria-label="Toggle dark mode"
-        >
+</nav>
+<button aria-label="Toggle dark mode" class="hidden cursor-pointer text-xl md:block" id="themeToggle" type="button">
           🌙
         </button>
-        <!-- Contact Button -->
-        <div class="hidden items-center md:flex">
-          <a
-            href="#contact"
-            class="rounded-md bg-blue-600 px-5 py-2.5 text-base font-semibold text-white transition duration-200 hover:bg-purple-600 lg:px-6 lg:text-lg"
-          >
+<!-- Contact Button -->
+<div class="hidden items-center md:flex">
+<a class="rounded-md bg-blue-600 px-5 py-2.5 text-base font-semibold text-white transition duration-200 hover:bg-purple-600 lg:px-6 lg:text-lg" href="#contact">
             Contact Us
           </a>
-        </div>
-
-        <!-- Mobile Menu -->
+</div>
+<!-- Mobile Menu -->
 <div class="flex items-center gap-4 md:hidden">
-
-  <!-- Mobile Dark Mode -->
-  <button
-    id="mobileThemeToggle"
-    type="button"
-    class="cursor-pointer text-xl"
-    aria-label="Toggle dark mode"
-  >
+<!-- Mobile Dark Mode -->
+<button aria-label="Toggle dark mode" class="cursor-pointer text-xl" id="mobileThemeToggle" type="button">
     🌙
   </button>
-  <!-- Hamburger -->
-  <button
-    id="menuButton"
-    type="button"
-    aria-label="Open menu"
-    class="relative h-8 w-8 cursor-pointer"
-  >
-
-    <!-- Hamburger -->
-    <span
-      id="hamburgerIcon"
-      class="absolute inset-0 flex flex-col items-center justify-center gap-1.5"
-    >
-      <span class="h-0.5 w-7 bg-black dark:bg-white"></span>
-      <span class="h-0.5 w-7 bg-black dark:bg-white"></span>
-      <span class="h-0.5 w-7 bg-black dark:bg-white"></span>
-    </span>
-
-  </button>
+<!-- Hamburger -->
+<button aria-label="Open menu" class="relative h-8 w-8 cursor-pointer" id="menuButton" type="button">
+<!-- Hamburger -->
+<span class="absolute inset-0 flex flex-col items-center justify-center gap-1.5" id="hamburgerIcon">
+<span class="h-0.5 w-7 bg-black dark:bg-white"></span>
+<span class="h-0.5 w-7 bg-black dark:bg-white"></span>
+<span class="h-0.5 w-7 bg-black dark:bg-white"></span>
+</span>
+</button>
 </div>
-        <!-- Mobile Menu -->
-        <div
-  id="mobileMenu"
-  class="hidden flex-col items-center gap-5 bg-white dark:bg-gray-800 px-6 py-6 shadow-md md:hidden"
->
- <div class="flex ">
-    <button
-      id="closeButton"
-      type="button"
-      aria-label="Close menu"
-      class="text-2xl text-black dark:text-white hover:text-blue-600"
-    >x</button>
-  </div>
-  <a href="#home" class="text-base text-black dark:text-white hover:text-blue-600 ">
+<!-- Mobile Menu -->
+<div class="hidden flex-col items-center gap-5 bg-white dark:bg-gray-800 px-6 py-6 shadow-md md:hidden" id="mobileMenu">
+<div class="flex">
+<button aria-label="Close menu" class="text-2xl text-black dark:text-white hover:text-blue-600" id="closeButton" type="button">x</button>
+</div>
+<a class="text-base text-black dark:text-white hover:text-blue-600" href="#home">
     Home
   </a>
-
-  <a href="#about" class="text-base text-black dark:text-white hover:text-blue-600">
+<a class="text-base text-black dark:text-white hover:text-blue-600" href="#about">
     About Us
   </a>
-
-  <a href="#services" class="text-base text-black dark:text-white hover:text-blue-600">
+<a class="text-base text-black dark:text-white hover:text-blue-600" href="#services">
     Services
   </a>
-
-  <a href="#pricing" class="text-base text-black dark:text-white hover:text-blue-600">
+<a class="text-base text-black dark:text-white hover:text-blue-600" href="#pricing">
     Pricing
   </a>
-
-  <a href="#blog" class="text-base text-black dark:text-white hover:text-blue-600">
+<a class="text-base text-black dark:text-white hover:text-blue-600" href="#blog">
     Blog
   </a>
-
-  <a
-    href="#contact"
-    class="rounded-md bg-blue-600 px-5 py-2.5 font-semibold text-white hover:bg-purple-600"
-  >
+<a class="rounded-md bg-blue-600 px-5 py-2.5 font-semibold text-white hover:bg-purple-600" href="#contact">
     Contact Us
   </a>
-  
 </div>
-      </section>
-    </header>
-
-    <!-- ================= HERO SECTION ================= -->
-    <main>
-      <section
-        id="home"
-        class="mx-4 flex items-center justify-center py-8 md:mx-8 lg:mx-10"
-      >
-        <div
-          class="flex w-full max-w-7xl flex-col items-center justify-center gap-8 p-4 md:p-8 lg:flex-row lg:gap-10"
-        >
-          <!-- Hero Left -->
-          <div
-            class="flex w-full flex-col items-center justify-center p-4 text-center lg:w-1/2 lg:items-start lg:text-left"
-          >
-            <!-- Subheading -->
-            <div
-              class="text-sm font-bold tracking-wide text-blue-600 sm:text-base lg:text-lg"
-            >
+</section>
+</header>
+<!-- ================= HERO SECTION ================= -->
+<main>
+<section class="mx-4 flex items-center justify-center py-8 md:mx-8 lg:mx-10" id="home">
+<div class="flex w-full max-w-7xl flex-col items-center justify-center gap-8 p-4 md:p-8 lg:flex-row lg:gap-10">
+<!-- Hero Left -->
+<div class="flex w-full flex-col items-center justify-center p-4 text-center lg:w-1/2 lg:items-start lg:text-left">
+<!-- Subheading -->
+<div class="text-sm font-bold tracking-wide text-blue-600 sm:text-base lg:text-lg">
               WE BUILD DIGITAL SOLUTIONS
             </div>
-            <!-- Heading -->
-            <h1
-              class="mt-3 text-4xl font-bold leading-tight text-black dark:text-white sm:text-5xl md:text-5xl lg:text-[3.2rem]"
-            >
+<!-- Heading -->
+<h1 class="mt-3 text-4xl font-bold leading-tight text-black dark:text-white sm:text-5xl md:text-5xl lg:text-[3.2rem]">
               Build Digital Experiences That
               <span class="text-blue-600"> Grow your Business </span>
-            </h1>
-            <!-- Description -->
-            <p
-              class="mt-5 max-w-xl text-base font-normal leading-relaxed text-slate-500 sm:text-lg lg:text-xl"
-            >
+</h1>
+<!-- Description -->
+<p class="mt-5 max-w-xl text-base font-normal leading-relaxed text-slate-500 sm:text-lg lg:text-xl">
               We help startups and businesses create beautiful, fast and
               scalable digital products that drive real results.
             </p>
-            <!-- Hero Buttons -->
-            <div
-              class="mt-6 flex w-full flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"
-            >
-              <a
-                href="#contact"
-                class="w-full max-w-xs rounded-lg bg-blue-600 px-6 py-4 text-center text-base font-bold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-purple-600 sm:w-auto"
-              >
+<!-- Hero Buttons -->
+<div class="mt-6 flex w-full flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+<a class="w-full max-w-xs rounded-lg bg-blue-600 px-6 py-4 text-center text-base font-bold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-purple-600 sm:w-auto" href="#contact">
                 Get Started →
               </a>
-              <a
-                href="#services"
-                class="w-full max-w-xs rounded-lg border-2 border-black dark:border-white px-6 py-4 text-center text-base font-bold text-black dark:text-white transition duration-200 hover:-translate-y-0.5 hover:bg-black hover:text-white sm:w-auto">
+<a class="w-full max-w-xs rounded-lg border-2 border-black dark:border-white px-6 py-4 text-center text-base font-bold text-black dark:text-white transition duration-200 hover:-translate-y-0.5 hover:bg-black hover:text-white sm:w-auto" href="#services">
               
                 See Our Work →
               </a>
-            </div>
-            <!-- Feedback -->
-            <div
-              class="mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start"
-            >
-              <!-- Avatars -->
-              <div class="flex items-center">
-                <img
-                  src="avator-1.png"
-                  alt="Client"
-                  class="h-9 w-9 rounded-full border-2 border-white object-cover"
-                />
-                <img
-                  src="avator2.png"
-                  alt="Client"
-                  class="-ml-2 h-9 w-9 rounded-full border-2 border-white object-cover"
-                />
-                <img
-                  src="avator3.png"
-                  alt="Client"
-                  class="-ml-2 h-9 w-9 rounded-full border-2 border-white object-cover"
-                />
-                <img
-                  src="avator2.png"
-                  alt="Client"
-                  class="-ml-2 h-9 w-9 rounded-full border-2 border-white object-cover"
-                />
-              </div>
-              <!-- Reviews -->
-              <div class="flex flex-col">
-                <div class="ml-2 text-sm text-slate-600 dark:text-white">
+</div>
+<!-- Feedback -->
+<div class="mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+<!-- Avatars -->
+<div class="flex items-center">
+<img alt="Client" class="h-9 w-9 rounded-full border-2 border-white object-cover" height="36" src="avator-1.webp" width="36"/>
+<img alt="Client" class="-ml-2 h-9 w-9 rounded-full border-2 border-white object-cover" height="36" src="avator2.webp" width="36"/>
+<img alt="Client" class="-ml-2 h-9 w-9 rounded-full border-2 border-white object-cover" height="36" src="avator3.webp" width="36"/>
+<img alt="Client" class="-ml-2 h-9 w-9 rounded-full border-2 border-white object-cover" height="36" src="avator2.webp" width="36"/>
+</div>
+<!-- Reviews -->
+<div class="flex flex-col">
+<div class="ml-2 text-sm text-slate-600 dark:text-white">
                   Trusted by
                   <span class="font-bold text-black dark:text-white"> 500+ clients </span>
-                </div>
-                <img
-                  src="review img.png"
-                  alt="Client reviews"
-                  class="ml-4 mt-1 h-8 w-28 object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Hero Right -->
-          <div class="flex w-full items-center justify-center lg:w-1/2">
-            <img
-              src="Hero-img.webp"
-              alt="Nexa Digital Solution Hero"
-              class="h-auto w-full max-w-lg rounded-xl object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= FEATURES ================= -->
-      <section
-        id="services"
-        class="flex items-center justify-center px-4 py-8 md:px-8"
-      >
-        <div
-          class="flex w-full flex-col items-center justify-center rounded-2xl bg-slate-100 dark:bg-gray-800 px-6 py-12 text-center md:px-8"
-        >
-          <!-- Feature Subheading -->
-          <div class="text-base font-bold tracking-wider text-blue-600">
+</div>
+<img alt="Client reviews" class="ml-4 mt-1 h-8 w-28 object-contain" height="32" src="review img.png" width="112"/>
+</div>
+</div>
+</div>
+<!-- Hero Right -->
+<div class="flex w-full items-center justify-center lg:w-1/2">
+<img alt="Nexa Digital Solution Hero" class="h-auto w-full max-w-lg rounded-xl object-cover" height="400" src="Hero-img.webp" width="600"/>
+</div>
+</div>
+</section>
+<!-- ================= FEATURES ================= -->
+<section class="flex items-center justify-center px-4 py-8 md:px-8" id="services">
+<div class="flex w-full flex-col items-center justify-center rounded-2xl bg-slate-100 dark:bg-gray-800 px-6 py-12 text-center md:px-8">
+<!-- Feature Subheading -->
+<div class="text-base font-bold tracking-wider text-blue-600">
             WHAT WE DO
           </div>
-          <!-- Feature Heading -->
-          <h2 class="mt-1 text-2xl font-bold text-black dark:text-white sm:text-3xl">
+<!-- Feature Heading -->
+<h2 class="mt-1 text-2xl font-bold text-black dark:text-white sm:text-3xl">
             Powerful Features for Your Success
           </h2>
-          <!-- Feature Description -->
-          <p class="mt-2 max-w-2xl text-base text-slate-500 dark:text-slate-300">
+<!-- Feature Description -->
+<p class="mt-2 max-w-2xl text-base text-slate-500 dark:text-slate-300">
             We Combine creativity, technology and strategy to deliver
             exceptional results.
           </p>
-          <!-- Feature Cards -->
-          <div
-            class="mt-8 flex w-full flex-wrap items-center justify-center gap-6"
-          >
-            <!-- Web Development -->
-            <div
-              class="flex w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-blue-50 p-8 shadow-[0_15px_25px_-10px_#8fa7c6] transition duration-300 hover:-translate-y-1.5"
-            >
-              <img
-                src="web develop.png"
-                alt="Web Development"
-                class="h-16 w-16 rounded-full object-cover"
-              />
-              <h3 class="text-center text-lg font-bold dark:text-black">Web Development</h3>
-              <p class="text-center text-sm leading-relaxed text-slate-500">
+<!-- Feature Cards -->
+<div class="mt-8 flex w-full flex-wrap items-center justify-center gap-6">
+<!-- Web Development -->
+<div class="flex w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-blue-50 p-8 shadow-[0_15px_25px_-10px_#8fa7c6] transition duration-300 hover:-translate-y-1.5">
+<img alt="Web Development" class="h-16 w-16 rounded-full object-cover" height="64" src="web develop.webp" width="64"/>
+<h3 class="text-center text-lg font-bold dark:text-black">Web Development</h3>
+<p class="text-center text-sm leading-relaxed text-slate-500">
                 We build fast, responsive and scalable Websites using the latest
                 Technologies.
               </p>
-            </div>
-            <!-- UI/UX Design -->
-            <div
-              class="flex w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-purple-50 p-8 shadow-[0_15px_25px_-10px_#dfcdf2] transition duration-300 hover:-translate-y-1.5"
-            >
-              <img
-                src="ui design.png"
-                alt="UI/UX Design"
-                class="h-16 w-16 rounded-full object-cover"
-              />
-              <h3 class="text-center text-lg font-bold dark:text-black">UI/UX Design</h3>
-              <p class="text-center text-sm leading-relaxed text-slate-500">
+</div>
+<!-- UI/UX Design -->
+<div class="flex w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-purple-50 p-8 shadow-[0_15px_25px_-10px_#dfcdf2] transition duration-300 hover:-translate-y-1.5">
+<img alt="UI/UX Design" class="h-16 w-16 rounded-full object-cover" height="64" src="ui design.webp" width="64"/>
+<h3 class="text-center text-lg font-bold dark:text-black">UI/UX Design</h3>
+<p class="text-center text-sm leading-relaxed text-slate-500">
                 We build fast, responsive and scalable Websites using the latest
                 Technologies.
               </p>
-            </div>
-
-            <!-- Mobile Development -->
-            <div
-              class="flex w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-emerald-50 p-8 shadow-[0_15px_25px_-10px_#d3efe2] transition duration-300 hover:-translate-y-1.5"
-            >
-              <img
-                src="digital marketing.png"
-                alt="Mobile Development"
-                class="h-16 w-16 rounded-full object-cover"
-              />
-              <h3 class="text-center text-lg font-bold dark:text-black">Mobile Development</h3>
-              <p class="text-center text-sm leading-relaxed text-slate-500">
+</div>
+<!-- Mobile Development -->
+<div class="flex w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-emerald-50 p-8 shadow-[0_15px_25px_-10px_#d3efe2] transition duration-300 hover:-translate-y-1.5">
+<img alt="Mobile Development" class="h-16 w-16 rounded-full object-cover" height="64" src="digital marketing.webp" width="64"/>
+<h3 class="text-center text-lg font-bold dark:text-black">Mobile Development</h3>
+<p class="text-center text-sm leading-relaxed text-slate-500">
                 We build fast, responsive and scalable Websites using the latest
                 Technologies.
               </p>
-            </div>
-
-            <!-- Digital Marketing -->
-            <div
-              class="flex w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-orange-50 p-8 shadow-[0_15px_25px_-10px_#efdfcc] transition duration-300 hover:-translate-y-1.5"
-            >
-              <img
-                src="fire icon.png"
-                alt="Digital Marketing"
-                class="h-16 w-16 rounded-full object-cover"
-              />
-              <h3 class="text-center text-lg font-bold dark:text-black">Digital Marketing</h3>
-              <p class="text-center text-sm leading-relaxed text-slate-500">
+</div>
+<!-- Digital Marketing -->
+<div class="flex w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-orange-50 p-8 shadow-[0_15px_25px_-10px_#efdfcc] transition duration-300 hover:-translate-y-1.5">
+<img alt="Digital Marketing" class="h-16 w-16 rounded-full object-cover" height="64" src="fire icon.webp" width="64"/>
+<h3 class="text-center text-lg font-bold dark:text-black">Digital Marketing</h3>
+<p class="text-center text-sm leading-relaxed text-slate-500">
                 We build fast, responsive and scalable Websites using the latest
                 Technologies.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-     <!-- ================= FAQ ACCORDION ================= -->
-<section id="faq" class="w-full px-4 py-12">
-  <div class="mx-auto w-full max-w-3xl">
-
-    <!-- FAQ Heading -->
-    <div class="mb-8 text-center">
-      <p class="text-base font-bold tracking-wider text-blue-600">
+</div>
+</div>
+</div>
+</section>
+<!-- ================= FAQ ACCORDION ================= -->
+<section class="w-full px-4 py-12" id="faq">
+<div class="mx-auto w-full max-w-3xl">
+<!-- FAQ Heading -->
+<div class="mb-8 text-center">
+<p class="text-base font-bold tracking-wider text-blue-600">
         FAQ
       </p>
-
-      <h2 class="mt-2 text-2xl font-bold text-black dark:text-white sm:text-3xl">
+<h2 class="mt-2 text-2xl font-bold text-black dark:text-white sm:text-3xl">
         Frequently Asked Questions
       </h2>
-
-      <p class="mt-2 text-sm text-slate-500 dark:text-slate-300">
+<p class="mt-2 text-sm text-slate-500 dark:text-slate-300">
         Find answers to some of the most common questions about our services.
       </p>
-    </div>
-
-    <!-- FAQ Items -->
-    <div class="space-y-4">
-
-      <!-- FAQ 1 -->
-      <div
-        class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800"
-      >
-        <button
-          type="button"
-          class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white"
-        >
-          <span>What services do you offer?</span>
-
-          <span class="faq-icon ml-4 text-2xl font-normal">
+</div>
+<!-- FAQ Items -->
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<div class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+<button class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white" type="button">
+<span>What services do you offer?</span>
+<span class="faq-icon ml-4 text-2xl font-normal">
             +
           </span>
-        </button>
-
-        <div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
-          <p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+</button>
+<div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
+<p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
             We offer a comprehensive range of digital services including
             web development, UI/UX design, mobile app development, and
             digital marketing strategies tailored to your business needs.
           </p>
-        </div>
-      </div>
-
-      <!-- FAQ 2 -->
-      <div
-        class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800"
-      >
-        <button
-          type="button"
-          class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white"
-        >
-          <span>How long does a typical project take?</span>
-
-          <span class="faq-icon ml-4 text-2xl font-normal">
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+<button class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white" type="button">
+<span>How long does a typical project take?</span>
+<span class="faq-icon ml-4 text-2xl font-normal">
             +
           </span>
-        </button>
-
-        <div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
-          <p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+</button>
+<div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
+<p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
             Project timelines vary depending on complexity and scope.
             Typically, web projects range from 4–12 weeks. We'll provide
             a detailed timeline during the initial consultation.
           </p>
-        </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div
-        class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800"
-      >
-        <button
-          type="button"
-          class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white"
-        >
-          <span>Do you provide ongoing support?</span>
-
-          <span class="faq-icon ml-4 text-2xl font-normal">
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+<button class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white" type="button">
+<span>Do you provide ongoing support?</span>
+<span class="faq-icon ml-4 text-2xl font-normal">
             +
           </span>
-        </button>
-
-        <div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
-          <p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+</button>
+<div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
+<p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
             Absolutely! We offer ongoing maintenance and support packages
             to ensure your website or app continues to perform optimally.
             Support plans are customizable based on your needs.
           </p>
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div
-        class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800"
-      >
-        <button
-          type="button"
-          class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white"
-        >
-          <span>What is your pricing model?</span>
-
-          <span class="faq-icon ml-4 text-2xl font-normal">
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+<button class="faq-button flex w-full items-center justify-between px-5 py-4 text-left font-semibold text-black transition hover:text-blue-600 dark:text-white" type="button">
+<span>What is your pricing model?</span>
+<span class="faq-icon ml-4 text-2xl font-normal">
             +
           </span>
-        </button>
-
-        <div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
-          <p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+</button>
+<div class="accordion-content hidden border-t border-slate-200 dark:border-gray-700">
+<p class="px-5 py-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
             We offer flexible pricing models including fixed-price projects,
             hourly rates, and retainer-based engagements. Contact us to
             discuss which option works best for your budget.
           </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
 </section>
-      <!-- ================= TESTIMONIALS ================= -->
-      <section id="about" class="flex items-center justify-center px-4 py-8">
-        <div
-          class="flex w-full flex-col items-center justify-center px-4 py-8 text-center md:px-[5%]"
-        >
-          <!-- Testimonial Subheading -->
-          <div class="text-base font-bold tracking-wider text-blue-600">
+<!-- ================= TESTIMONIALS ================= -->
+<section class="flex items-center justify-center px-4 py-8" id="about">
+<div class="flex w-full flex-col items-center justify-center px-4 py-8 text-center md:px-[5%]">
+<!-- Testimonial Subheading -->
+<div class="text-base font-bold tracking-wider text-blue-600">
             TESTIMONIALS
           </div>
-          <!-- Heading -->
-          <h2 class="text-2xl font-bold text-black dark:text-white sm:text-3xl">
+<!-- Heading -->
+<h2 class="text-2xl font-bold text-black dark:text-white sm:text-3xl">
             What Our Clients Say
           </h2>
-          <!-- Description -->
-          <p class="mt-2 text-sm text-slate-500">
+<!-- Description -->
+<p class="mt-2 text-sm text-slate-500">
             We're proud to have amazing clients who love our work.
           </p>
-          <!-- Testimonial Cards -->
-          <div
-            class="mt-8 flex w-full gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth md:flex-wrap md:justify-center md:overflow-visible"
-          >
-            <!-- Testimonial 1 -->
-            <div
-               class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm"
-              >
-              <div class="flex items-center justify-start">
-                <img
-                  src="avator3.png"
-                  alt="Ali Raza"
-                  class="h-12 w-12 rounded-full object-cover"
-                />
-                <img
-                  src="review img.png"
-                  alt="5 star review"
-                  class="ml-4 mt-1 h-6 w-16 object-contain"
-                />
-              </div>
-              <p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-white">
+<!-- Testimonial Cards -->
+<div class="mt-8 flex w-full gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth md:flex-wrap md:justify-center md:overflow-visible">
+<!-- Testimonial 1 -->
+<div class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm">
+<div class="flex items-center justify-start">
+<img alt="Ali Raza" class="h-12 w-12 rounded-full object-cover" height="48" src="avator3.webp" width="48"/>
+<img alt="5 star review" class="ml-4 mt-1 h-6 w-16 object-contain" height="24" src="review img.png" width="64"/>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-white">
                 “Nexa team delivered an amazing website that exceeded our
                 expectations. Professional, fast and reliable”
               </p>
-              <div class="pt-6">
-                <h3 class="text-base font-bold">Ali Raza</h3>
-                <p class="text-xs text-slate-500">Doctorate, physiotherapist</p>
-              </div>
-            </div>
-            <!-- Testimonial 2 -->
-            <div
-              class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm"
-            >
-              <div class="flex items-center justify-start">
-                <img
-                  src="avator2.png"
-                  alt="Sarah Aslam"
-                  class="h-12 w-12 rounded-full object-cover"
-                />
-                <img
-                  src="review img.png"
-                  alt="5 star review"
-                  class="ml-4 mt-1 h-6 w-16 object-contain"
-                />
-              </div>
-              <p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-white ">
+<div class="pt-6">
+<h3 class="text-base font-bold">Ali Raza</h3>
+<p class="text-xs text-slate-500">Doctorate, physiotherapist</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm">
+<div class="flex items-center justify-start">
+<img alt="Sarah Aslam" class="h-12 w-12 rounded-full object-cover" height="48" src="avator2.webp" width="48"/>
+<img alt="5 star review" class="ml-4 mt-1 h-6 w-16 object-contain" height="24" src="review img.png" width="64"/>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-white">
                 “Nexa team delivered an amazing website that exceeded our
                 expectations. Professional, fast and reliable”
               </p>
-              <div class="pt-6">
-                <h3 class="text-base font-bold">Sarah Aslam</h3>
-                <p class="text-xs text-slate-500">CEO, Growthlab</p>
-              </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div
-              class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm"
-            >
-              <div class="flex items-center justify-start">
-                <img
-                  src="avator-1.png"
-                  alt="David John"
-                  class="h-12 w-12 rounded-full object-cover"
-                />
-                <img
-                  src="review img.png"
-                  alt="5 star review"
-                  class="ml-4 mt-1 h-6 w-16 object-contain"
-                />
-              </div>
-              <p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-white">
+<div class="pt-6">
+<h3 class="text-base font-bold">Sarah Aslam</h3>
+<p class="text-xs text-slate-500">CEO, Growthlab</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="min-w-full snap-center rounded-2xl border-2 border-slate-50 dark:border-gray-700 p-6 text-left shadow-[0_15px_25px_-10px_#f0ede9] dark:shadow-[0_15px_25px_-10px_#969da7] transition duration-300 hover:-translate-y-1.5 md:min-w-0 md:max-w-sm">
+<div class="flex items-center justify-start">
+<img alt="David John" class="h-12 w-12 rounded-full object-cover" height="48" src="avator-1.webp" width="48"/>
+<img alt="5 star review" class="ml-4 mt-1 h-6 w-16 object-contain" height="24" src="review img.png" width="64"/>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-white">
                 “Nexa team delivered an amazing website that exceeded our
                 expectations. Professional, fast and reliable”
               </p>
-              <div class="pt-6">
-                <h3 class="text-base font-bold">David John</h3>
-                <p class="text-xs text-slate-500">HR Intern, Microsoft</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-    <footer id="contact" class="w-full">
-      <!-- Footer Top -->
-      <div class="w-full bg-slate-800 px-6 py-12 md:px-10 lg:px-16">
-        <div
-          class="flex flex-wrap justify-center gap-10 border-b border-slate-600 pb-12"
-        >
-          <!-- Footer Left -->
-          <div class="flex w-full max-w-sm flex-col gap-6">
-            <div>
-              <img
-                src="logo.png"
-                alt="Nexa logo"
-                class="h-16 w-36 object-contain"
-              />
-            </div>
-            <p class="pt-2 text-base leading-relaxed text-slate-400">
+<div class="pt-6">
+<h3 class="text-base font-bold">David John</h3>
+<p class="text-xs text-slate-500">HR Intern, Microsoft</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="w-full" id="contact">
+<!-- Footer Top -->
+<div class="w-full bg-slate-800 px-6 py-12 md:px-10 lg:px-16">
+<div class="flex flex-wrap justify-center gap-10 border-b border-slate-600 pb-12">
+<!-- Footer Left -->
+<div class="flex w-full max-w-sm flex-col gap-6">
+<div>
+<img alt="Nexa logo" class="h-16 w-36 object-contain" height="64" src="logo.png" width="144"/>
+</div>
+<p class="pt-2 text-base leading-relaxed text-slate-400">
               We build digital experience that help businesses grow and succeed
               in the modern world.
             </p>
-
-            <!-- Social Icons -->
-            <div class="flex items-center gap-4">
-              <a href="#" aria-label="Facebook">
-                <img
-                  src="facebok.avif"
-                  alt="Facebook"
-                  class="h-9 w-9 object-contain transition duration-200 hover:-translate-y-1"
-                />
-              </a>
-              <a href="#" aria-label="Twitter">
-                <img
-                  src="Twitter.png"
-                  alt="Twitter"
-                  class="h-9 w-9 object-contain transition duration-200 hover:-translate-y-1"
-                />
-              </a>
-              <a href="#" aria-label="Instagram">
-                <img
-                  src="instagram.png"
-                  alt="Instagram"
-                  class="h-9 w-9 object-contain transition duration-200 hover:-translate-y-1"
-                />
-              </a>
-              <a href="#" aria-label="TikTok">
-                <img
-                  src="tiktok-logo-png.png"
-                  alt="TikTok"
-                  class="h-9 w-9 object-contain transition duration-200 hover:-translate-y-1"
-                />
-              </a>
-            </div>
-          </div>
-
-          <!-- Footer Right -->
-          <div
-            class="hidden w-full flex-wrap justify-around gap-10 md:flex md:w-[60%]"
-          >
-            <!-- Quick Links -->
-            <div>
-              <h3 class="mb-6 text-lg font-bold text-white">Quick Links</h3>
-              <ul class="flex flex-col gap-4">
-                <li>
-                  <a
-                    href="#home"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+<!-- Social Icons -->
+<div class="flex items-center gap-4">
+<a aria-label="Facebook" href="#">
+<img alt="Facebook" class="h-9 w-9 object-contain transition duration-200 hover:-translate-y-1" height="36" src="facebok.avif" width="36"/>
+</a>
+<a aria-label="Twitter" href="#">
+<img alt="Twitter" class="h-9 w-9 object-contain transition duration-200 hover:-translate-y-1" height="36" src="Twitter.webp" width="36"/>
+</a>
+<a aria-label="Instagram" href="#">
+<img alt="Instagram" class="h-9 w-9 object-contain transition duration-200 hover:-translate-y-1" height="36" src="instagram.webp" width="36"/>
+</a>
+<a aria-label="TikTok" href="#">
+<img alt="TikTok" class="h-9 w-9 object-contain transition duration-200 hover:-translate-y-1" height="36" src="tiktok-logo-png.webp" width="36"/>
+</a>
+</div>
+</div>
+<!-- Footer Right -->
+<div class="hidden w-full flex-wrap justify-around gap-10 md:flex md:w-[60%]">
+<!-- Quick Links -->
+<div>
+<h3 class="mb-6 text-lg font-bold text-white">Quick Links</h3>
+<ul class="flex flex-col gap-4">
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#home">
                     Home
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#about"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#about">
                     About Us
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#services">
                     Services
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#pricing"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#pricing">
                     Pricing
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#blog"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#blog">
                     Blog
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#contact">
                     Contact Us
                   </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Services -->
-            <div>
-              <h3 class="mb-6 text-lg font-bold text-white">Services</h3>
-              <ul class="flex flex-col gap-4">
-                <li>
-                  <a
-                    href="#services"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+</ul>
+</div>
+<!-- Services -->
+<div>
+<h3 class="mb-6 text-lg font-bold text-white">Services</h3>
+<ul class="flex flex-col gap-4">
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#services">
                     Web Development
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#services">
                     UI/UX Design
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#services">
                     Mobile Development
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#services">
                     Digital Marketing
                   </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Company -->
-            <div>
-              <h3 class="mb-6 text-lg font-bold text-white">Company</h3>
-              <ul class="flex flex-col gap-4">
-                <li>
-                  <a
-                    href="#about"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+</ul>
+</div>
+<!-- Company -->
+<div>
+<h3 class="mb-6 text-lg font-bold text-white">Company</h3>
+<ul class="flex flex-col gap-4">
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#about">
                     About Us
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#career"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#career">
                     Career
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#team"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#team">
                     Our Team
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#privacy"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#privacy">
                     Privacy Policy
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="#terms"
-                    class="text-sm text-slate-400 transition hover:text-white"
-                  >
-                    Terms & Conditions
+</li>
+<li>
+<a class="text-sm text-slate-400 transition hover:text-white" href="#terms">
+                    Terms &amp; Conditions
                   </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Newsletter -->
-          <div>
-            <h3 class="mb-6 text-lg font-bold text-white">Newsletter</h3>
-            <p class="text-sm text-slate-400">Stay Updated</p>   
-          <form id="newsletterForm" class="mt-4">
-            <input
-             id="emailInput" type="email" placeholder="Enter Your Email"
-             class="w-full rounded bg-slate-700 px-3 py-2 text-sm font-semibold text-white outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500"/>
-             <p id="emailError" class="mt-2 text-xs text-red-400"></p>
-             <button type="submit"
-             class="mt-4 rounded bg-blue-600 px-4 py-2 text-sm font-bold text-white shadow-[0_2px_8px_#2563EB] transition hover:bg-purple-600">
+</li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="mb-6 text-lg font-bold text-white">Newsletter</h3>
+<p class="text-sm text-slate-400">Stay Updated</p>
+<form class="mt-4" id="newsletterForm">
+<input class="w-full rounded bg-slate-700 px-3 py-2 text-sm font-semibold text-white outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500" id="emailInput" placeholder="Enter Your Email" type="email"/>
+<p class="mt-2 text-xs text-red-400" id="emailError"></p>
+<button class="mt-4 rounded bg-blue-600 px-4 py-2 text-sm font-bold text-white shadow-[0_2px_8px_#2563EB] transition hover:bg-purple-600" type="submit">
              Subscribe
             </button>
-          </form>
-        </div>
-        </div> 
-        </div> 
-        <!-- Footer Bottom --> 
-         <div class="flex flex-col gap-3 pt-6 text-center text-sm text-white sm:flex-row sm:items-center sm:justify-between sm:text-left" 
-         > 
-         <div>© 2026 Nexa Digital Solution. All rights reserved.</div> 
-         <div class="flex justify-center gap-2 sm:justify-end">
-           <a href="#privacy" class="transition hover:text-blue-400"> Privacy Policy </a> 
-           <span>•</span> 
-           <a href="#terms" class="transition hover:text-blue-400"> Terms of Service </a>
-          </div> 
-          </div> 
-        </div> 
-      </footer> 
-    <script src="script.js"></script> 
-  </body> 
+</form>
+</div>
+</div>
+</div>
+<!-- Footer Bottom -->
+<div class="flex flex-col gap-3 pt-6 text-center text-sm text-white sm:flex-row sm:items-center sm:justify-between sm:text-left">
+<div>© 2026 Nexa Digital Solution. All rights reserved.</div>
+<div class="flex justify-center gap-2 sm:justify-end">
+<a class="transition hover:text-blue-400" href="#privacy"> Privacy Policy </a>
+<span>•</span>
+<a class="transition hover:text-blue-400" href="#terms"> Terms of Service </a>
+</div>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>

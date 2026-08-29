@@ -1,65 +1,77 @@
-  const menuButton = document.getElementById("menuButton");
-  const closeButton = document.getElementById("closeButton");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const themeToggle= document.getElementById("themeToggle");
-  const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+// ================= MOBILE MENU =================
 
-  menuButton.addEventListener("click", () => {
-    mobileMenu.classList.remove("hidden");
-    mobileMenu.classList.add("flex");
+const menuButton = document.getElementById("menuButton");
+const closeButton = document.getElementById("closeButton");
+const mobileMenu = document.getElementById("mobileMenu");
 
-    menuButton.classList.add("hidden");
-  });
+menuButton.addEventListener("click", () => {
+  mobileMenu.classList.remove("hidden");
+  mobileMenu.classList.add("flex");
+  menuButton.classList.add("hidden");
+});
 
-  closeButton.addEventListener("click", () => {
-    mobileMenu.classList.remove("flex");
-    mobileMenu.classList.add("hidden");
+closeButton.addEventListener("click", () => {
+  mobileMenu.classList.remove("flex");
+  mobileMenu.classList.add("hidden");
+  menuButton.classList.remove("hidden");
+});
 
-    menuButton.classList.remove("hidden");
-  });
-  function toggleTheme(button) {
-  document.documentElement.classList.toggle("dark");
 
-  if (document.documentElement.classList.contains("dark")) {
-    themeToggle.textContent = "☀️";
-    mobileThemeToggle.textContent = "☀️";
-  } else {
-    themeToggle.textContent = "🌙";
-    mobileThemeToggle.textContent = "🌙";
-  }
+// ================= THEME TOGGLE =================
+
+const themeToggle = document.getElementById("themeToggle");
+const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+
+function updateThemeIcon() {
+  const isDark = document.documentElement.classList.contains("dark");
+
+  themeToggle.textContent = isDark ? "☀️" : "🌙";
+  mobileThemeToggle.textContent = isDark ? "☀️" : "🌙";
 }
 
-themeToggle.addEventListener("click", () => {
-  toggleTheme(themeToggle);
-});
+function toggleTheme() {
+  document.documentElement.classList.toggle("dark");
+  updateThemeIcon();
+}
 
-mobileThemeToggle.addEventListener("click", () => {
-  toggleTheme(mobileThemeToggle);
-});
+themeToggle.addEventListener("click", toggleTheme);
+mobileThemeToggle.addEventListener("click", toggleTheme);
+
+
+// ================= MOBILE NAVIGATION =================
+
 const mobileLinks = mobileMenu.querySelectorAll("a");
 
-mobileLinks.forEach(link => {
+mobileLinks.forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("flex");
     mobileMenu.classList.add("hidden");
     menuButton.classList.remove("hidden");
   });
-  
 });
+
+
+// ================= FAQ ACCORDION =================
+
 const faqButtons = document.querySelectorAll(".faq-button");
+const accordionContents = document.querySelectorAll(".accordion-content");
+const faqIcons = document.querySelectorAll(".faq-icon");
 
 faqButtons.forEach((button) => {
   button.addEventListener("click", () => {
-
     const currentContent = button.nextElementSibling;
     const currentIcon = button.querySelector(".faq-icon");
-    document.querySelectorAll(".accordion-content").forEach((content) => {
+
+    const wasOpen = !currentContent.classList.contains("hidden");
+
+    accordionContents.forEach((content) => {
       content.classList.add("hidden");
     });
-    document.querySelectorAll(".faq-icon").forEach((icon) => {
+
+    faqIcons.forEach((icon) => {
       icon.textContent = "+";
     });
-    const wasOpen = !currentContent.classList.contains("hidden");
+
     if (!wasOpen) {
       currentContent.classList.remove("hidden");
       currentIcon.textContent = "−";
@@ -67,36 +79,34 @@ faqButtons.forEach((button) => {
   });
 });
 
+
+// ================= NEWSLETTER VALIDATION =================
+
 const newsletterForm = document.getElementById("newsletterForm");
 const emailInput = document.getElementById("emailInput");
 const emailError = document.getElementById("emailError");
 
 emailInput.addEventListener("input", () => {
-
   const email = emailInput.value.trim();
 
   if (email === "") {
     emailError.textContent = "Email is required.";
     emailInput.classList.remove("border-green-500");
     emailInput.classList.add("border-red-500");
-  }
-
+  } 
   else if (!email.includes("@")) {
     emailError.textContent = "Please enter a valid email.";
     emailInput.classList.remove("border-green-500");
     emailInput.classList.add("border-red-500");
-  }
-
+  } 
   else {
     emailError.textContent = "Valid email ✓";
     emailInput.classList.remove("border-red-500");
     emailInput.classList.add("border-green-500");
   }
-
 });
 
 newsletterForm.addEventListener("submit", (event) => {
-
   event.preventDefault();
 
   const email = emailInput.value.trim();
@@ -111,7 +121,6 @@ newsletterForm.addEventListener("submit", (event) => {
   alert("Thank you! You have successfully subscribed.");
 
   newsletterForm.reset();
-
   emailError.textContent = "";
   emailInput.classList.remove("border-green-500");
 });
