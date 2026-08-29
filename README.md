@@ -1,6 +1,6 @@
 # 🚀 Nexa Digital Solution
 
-A modern and responsive digital agency landing page built with **HTML5 and CSS3**. Nexa Digital Solution is designed to showcase digital services, client testimonials, company information, and a professional agency-style interface.
+A modern and responsive digital agency landing page built with **HTML5 and TailWind**. Nexa Digital Solution is designed to showcase digital services, client testimonials, company information, and a professional agency-style interface.
 
 ## 📸 Website Preview
 
