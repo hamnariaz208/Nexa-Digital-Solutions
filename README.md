@@ -1,147 +1,117 @@
 # 🚀 Nexa Digital Solution
 
-A modern and responsive digital agency landing page built with **HTML5 and TailWind**. Nexa Digital Solution is designed to showcase digital services, client testimonials, company information, and a professional agency-style interface.
+A modern, responsive and professional **digital agency landing page** built with HTML5, CSS3, Tailwind CSS and JavaScript.
 
-## 📸 Website Preview
+🌐 **Live Website:** https://nexa-digital-solutions-chi.vercel.app/
 
-![Nexa Digital Solution Website Preview]()
+📂 **GitHub Repository:** https://github.com/hamnariaz208/Nexa-Digital-Solutions
 
-## 🌐 About The Project
+--
+## 📸 Website Screenshots
 
-**Nexa Digital Solution** is a frontend website concept for a digital agency that helps startups and businesses build beautiful, fast, and scalable digital products.
+### Desktop View
+![Nexa Digital Solution Desktop View](website-preview.png)
 
-The website provides a clean, modern, and professional user interface for presenting digital agency services and building trust with potential clients.
+### Mobile View
+![Nexa Digital Solution Mobile View](Mobile-preview.png)
+## 📌 About The Project
+
+**Nexa Digital Solution** is a modern digital agency website designed to showcase professional digital services, client testimonials and company information through a clean and responsive interface.
+
+This project was developed as part of the **Faran Digital Academy Web Engineering Internship — Week 4 Capstone Project**, focusing on frontend development, performance optimization, SEO, asset optimization and production deployment.
+
+The website is optimized to provide a smooth experience across desktop, tablet and mobile devices.
+
+---
 
 ## ✨ Features
 
-* 🏠 Modern Hero / Home Section
+* 🏠 Modern Hero Section
 * 💼 Professional Services Section
-* 🌐 Web Development
-* 🎨 UI/UX Design
-* 📱 Mobile Development
-* 🔥 Digital Marketing
+* 🌐 Web Development Services
+* 🎨 UI/UX Design Services
+* 📱 Mobile Development Services
+* 🔥 Digital Marketing Services
 * ⭐ Client Testimonials
-* 📩 Newsletter Subscription
-* 🔗 Footer Navigation
-* 📱 Responsive Navigation Menu
+* 📩 Newsletter Section
 * 🎯 Call-to-Action Buttons
-* 💻 Clean and Modern UI
+* 📱 Responsive Navigation
+* 💻 Fully Responsive Design
+* ⚡ Optimized Web Assets
+* 🔍 SEO Metadata
+* 🌐 Open Graph Metadata
+* 📌 Favicon
+* 🖼️ Modern WebP Images
+* 🔗 Social Media Links
 
-## 🎯 Hero Section
-
-The hero section introduces Nexa Digital Solution with:
-
-* Professional agency introduction
-* Main business heading
-* Short description
-* Call-to-action buttons
-* Client trust information
-* Customer review rating
-* Hero image
-
-## 💻 Services
-
-The website presents four major digital services:
-
-### 🌐 Web Development
-
-We build fast, responsive, and scalable websites using modern web technologies.
-
-### 🎨 UI/UX Design
-
-Creating clean, attractive, and user-friendly digital experiences.
-
-### 📱 Mobile Development
-
-Building modern mobile applications designed for performance and usability.
-
-### 🔥 Digital Marketing
-
-Helping businesses improve their online presence and reach their target audience.
-
-## ⭐ Testimonials
-
-A dedicated testimonial section displays client reviews along with:
-
-* Client profile
-* Client name
-* Professional information
-* Customer rating
-* Review description
-
-## 🦶 Footer
-
-The website footer includes:
-
-* Company information
-* Social media icons
-* Quick links
-* Services links
-* Company links
-* Newsletter subscription
-* Privacy Policy
-* Terms of Service
+---
 
 ## 🛠️ Technologies Used
 
 * **HTML5** — Website structure
-* **CSS3** — Styling and layout
-* **Responsive Design** — Adaptable layout for different screen sizes
-* **Images & Icons** — Visual elements and branding
+* **CSS3** — Styling and responsive layouts
+* **Tailwind CSS** — Utility-first styling
+* **JavaScript** — Interactivity and DOM manipulation
+* **Git** — Version control
+* **GitHub** — Source code management
+* **Vercel** — Production deployment
 
-## 📁 Project Structure
+---
 
-```text
-Nexa-Digital-Solution/
-│
-├── index.html
-├── style.css
-├── README.md
-├── website-preview.png
-│
-├── logo.png
-├── hamburgericon.png
-├── web develop.png
-├── fire icon.png
-├── review img.png
-│
-├── facebok.avif
-├── Twitter.png
-├── instagram.png
-├── tiktok-logo-png.png
-│
-├── avator-1.png
-├── avator2.png
-├── avator3.png
-├── ui design.png
-├── digital marketing.png
-│
-└── Hero-img.webp
-```
+## 🎯 Website Sections
 
-> **Note:** Make sure all image files are available in the correct directory and their names match the paths used in `index.html`.
+### 🏠 Hero Section
 
-## 🚀 How to Run
+The hero section introduces Nexa Digital Solution with:
 
-No special installation or dependencies are required.
+* Professional agency introduction
+* Main heading
+* Supporting description
+* Call-to-action buttons
+* Client trust information
+* Customer rating
+* Hero imagery
 
-### 1. Clone the Repository
+### 💼 Services
 
-```bash
-git clone https://github.com/your-username/nexa-digital-solution.git
-```
+The website presents four major digital services:
 
-### 2. Navigate to the Project
+**🌐 Web Development**
+Fast, responsive and scalable websites built using modern web technologies.
 
-```bash
-cd nexa-digital-solution
-```
+**🎨 UI/UX Design**
+Clean and user-friendly digital experiences focused on usability and visual design.
 
-### 3. Open the Website
+**📱 Mobile Development**
+Modern mobile solutions designed for performance and usability.
 
-Open the `index.html` file in your browser.
+**🔥 Digital Marketing**
+Digital strategies designed to improve business visibility and online presence.
 
-You can also use **Live Server** in VS Code for a better development experience.
+### ⭐ Testimonials
+
+The testimonial section showcases:
+
+* Client profiles
+* Client names
+* Professional information
+* Customer ratings
+* Review descriptions
+
+### 🦶 Footer
+
+The footer contains:
+
+* Company information
+* Social media links
+* Quick navigation
+* Services links
+* Company links
+* Newsletter section
+* Privacy Policy
+* Terms of Service
+
+---
 
 ## 📱 Responsive Design
 
@@ -151,61 +121,127 @@ The website is designed to work across different screen sizes:
 * 📱 Mobile
 * 📟 Tablet
 
-## 🎨 Website Sections
-
-```text
-┌─────────────────────┐
-│       Header        │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│    Hero Section     │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│ Services / Features │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│    Testimonials     │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│       Footer        │
-└─────────────────────┘
-```
-
-## 🔮 Future Improvements
-
-Planned improvements for future versions:
-
-* [ ] Complete responsive CSS optimization
-* [ ] Add JavaScript interactions
-* [ ] Add working Contact Us form
-* [ ] Add functional Newsletter subscription
-* [ ] Add About Us page
-* [ ] Add Pricing section
-* [ ] Add Blog section
-* [ ] Add smooth animations and transitions
-* [ ] Add dark mode
-* [ ] Connect backend/API
-* [ ] Add form validation
-* [ ] Deploy the website online
-
-## 📄 License
-
-This project is created for **learning and portfolio purposes**.
-
-You are free to modify, improve, and customize the project according to your requirements.
-
-## 👨‍💻 Author
-
-**Hamna Riaz**
-
-If you like this project, consider giving the repository a ⭐ on GitHub!
+The responsive layout ensures a consistent and user-friendly experience across devices.
 
 ---
 
-## 💙 Nexa Digital Solution
+## 🔍 SEO & Open Graph
 
-> **Build Digital Experiences That Grow Your Business.**
+The website includes important SEO and social sharing metadata:
+
+* Descriptive page title
+* Meta description
+* Meta keywords
+* Author information
+* Favicon
+* Open Graph title
+* Open Graph description
+* Open Graph image
+* Open Graph website type
+
+These features help improve search engine visibility and social media link previews.
+
+---
+
+## ⚡ Performance Optimization
+
+The project includes production-focused optimization such as:
+
+* 🖼️ Images converted to modern WebP format
+* 📦 `node_modules/` excluded using `.gitignore`
+* 🧹 Unnecessary project files cleaned
+* 📱 Responsive layout optimization
+* ⚡ Frontend assets optimized
+* 🔗 Asset paths checked
+* 🚀 Production deployment through Vercel
+
+---
+
+## 📁 Project Structure
+
+```text
+Nexa-Digital-Solutions/
+│
+├── index.html
+├── script.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── favicon.png
+├── website.png
+│
+├── src/
+│   ├── input.css
+│   └── output.css
+│
+├── *.webp
+├── *.png
+│
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/hamnariaz208/Nexa-Digital-Solutions.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd Nexa-Digital-Solutions
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Run the Project
+
+```bash
+npm run dev
+```
+
+You can also use **VS Code Live Server** for local development if required.
+
+---
+
+## 🌐 Live Deployment
+
+The website is deployed on **Vercel** and connected with the GitHub repository.
+
+### 🔗 Live Website
+
+https://nexa-digital-solutions-chi.vercel.app/
+
+Every new change pushed to the `main` branch can be deployed through the connected Vercel workflow.
+
+---
+
+## 👩‍💻 Author
+
+**Hamna Riaz**
+
+BS Computer Science Student | Frontend Web Developer
+
+---
+
+## 📄 License
+
+This project was created for **learning, internship and portfolio purposes**.
+
+---
+
+<div align="center">
+
+### 💙 Nexa Digital Solution
+
+**Build Digital Experiences That Grow Your Business.**
+
+⭐ If you like this project, consider giving the repository a star!
