@@ -13,7 +13,7 @@ A modern, responsive and professional **digital agency landing page** built with
 ![Nexa Digital Solution Desktop View](website-preview.png)
 
 ### Mobile View
-![Nexa Digital Solution Mobile View](Mobile-preview.png)
+![Nexa Digital Solution Mobile View](Mobile-preview.jpeg)
 ## 📌 About The Project
 
 **Nexa Digital Solution** is a modern digital agency website designed to showcase professional digital services, client testimonials and company information through a clean and responsive interface.
