@@ -4,7 +4,7 @@ A modern and responsive digital agency landing page built with **HTML5 and TailW
 
 ## 📸 Website Preview
 
-![Nexa Digital Solution Website Preview](website-preview.png)
+![Nexa Digital Solution Website Preview]()
 
 ## 🌐 About The Project
 
